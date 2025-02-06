@@ -2,10 +2,32 @@ body{
     background-color:#AEC6CF;
     text-align: center;
     color: aliceblue;
+    margin:0;
+    padding:0;
     font-family:monospace;
 }
 a{
     color:darkorchid;
 
 
+}
+
+h1{
+    font-size:2rem;
+    color: #d1d1d1;
+
+}
+h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+}
+h2 span{
+    display:inline-block;
+    line-height:1;
+    vertical-align:middle;
+}
+footer{
+    margin-top:20px;
+    font-size:0.9rem;
 }
