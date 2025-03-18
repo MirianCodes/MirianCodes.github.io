@@ -5,20 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm Project</title>
     <style>
+        body{
+            font-family:Lato;
+            margin: 0;
+            padding: 0;
+            background-color: #c6caed;
+            color:#333;
+
+        }
+        header{
+            background-color: #4a5240;
+            color:white;
+            padding:15px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: large;
+        }
+        figcaption{
+            text-align: center;
+            font-style: italic;
+        }
+        nav{
+            text-align: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        nav a{
+            color:white;
+            margin: 0 15px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav a::hover{
+            background-color: #6b7820;
+            border-radius: 5px;
+        }
+        main{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        section{
+    
+            max-width: 800px;
+            text-align: center;
+            background-color: #d1d0e5;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: none;
+        }
+        img{
+            width:100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+        .playlist{
+            list-style: none;
+            padding: 0;
+        }
+        .playlist li{
+            background: #ada8be;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+        }
+        .playlist img{
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 5px;
+    }
+
+        .list li {
+            max-width: 600px; 
+            background: #ada8be;
+            padding: 10px;
+            margin: 5px 0; 
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            list-style: none;
+        }
+        li{
+            margin: 10px 0;
+            text-align: center;
+
+        }
 
     </style>
 </head>
 <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<script>function showSection(id){
+    let sections = document.querySelectorAll('section');
+    for (let i = 0; i < sections.length; i++){
+        sections[i].style.display = 'none';
+    }
+    document.getElementById(id).style.display = 'block';
+
+}
+document.addEventListener('DOMContentLoaded', function(){
+    showSection('welcome');
+});
+    </script>
 <body>
     <header>
-        <h1></h1>
-        <div>
-            <h2>About</h2>
-            <p></p>
-        </div>
+        <h1>Music is My Therapy</h1>
+        <nav>
+            <a href="#" onclick="showSection('welcome')">Welcome</a>
+            <a href="#" onclick="showSection('about')">About Me</a>
+            <a href="#" onclick="showSection('besttimes')">When to to Listen to Music</a>
+            <a href="#" onclick="showSection('bestplace')">Best Places to Enjoy Music</a>
+            <a href="#" onclick="showSection('howto')">How to make the most out of music</a>
+            <a href="#" onclick="showSection('why')">Why listening to Music Matters</a>
+            <a href="#" onclick="showSection('ai')">AI prompts</a>
+
+        </nav>
     </header>
     <main>
+        <section id="welcome">
+            <h2>Welcome to my hobby of Listening to music</h2>
+            <p>Music is something that everyone can enjoy. There's a genre for everyone. Listening to music is a way to relax and escape. Here, I share my love for listening to music. </p>
+      
+        <figure>
+            <img src="https://i.pinimg.com/736x/cb/db/b3/cbdbb3aad78096ba68a1534fc5b59cc7.jpg" alt="Music">
+            <figcaption>Music is my therapy</figcaption>
+        </figure>
+        <p>Remember to keep an open mind when listening to new music, don't be confined to one genre or a language.
+
+        </p>
+        </section>
+        <section id="about">
+            <h2>About me</h2>
+            <p>Of course, I've always listened to music, mostly mainstream pop and the things that were playing on the radio. It wasn't until middle school that I started listening to things that weren't considered "mainstream." 
+                I started listening to BTS, a K-pop group, in 2016, and that's when I started exploring other genres. I started listening to other K-pop groups, and then I started listening to other genres like rock, rap, and indie. 
+                High school came around, and I started listening to more indie and alternative music. I started listening to artists like Clairo, Wallows, Artic-Monkeys, and Slipknot. If you look at my liked songs on Spotify, an 
+                account that I have since 2017, you'll see a variety of genres. I'm always looking for new music to listen to, and I'm always open to new genres.
+            </p>
+            <figure>
+                <img src="images/IMG_100.jpg" alt="Spotify">
+                <figcaption>My Spotify account when I started listening to BTS</figcaption>
+            </figure>
+            <p>My Favorite tracks of all time</p>
+            <ul class="list">
+                <li>Jigsaw Falling Into Place - Radiohead</li>
+                <li>Let Me Know - BTS</li>
+                <li>Why I Love You - Jay-Z, Kanye West, Mr.Hudson</li>
+                <li>Hole in the Earth - Deftones</li>
+                <li>Cherry Flavoured - The Neighbourhood</li>
+            </ul>
+        </section>
+        <section id="besttimes">
+            <h2>Best times to listen to Music</h2>
+            <p>Music makes daily routines more enjoyable. I recommend listening to music whenever you're moving:  walking to class, riding the bus, or 
+                the light rail. Music can make the most boring things fun. I also recommend listening to music when you're feeling down, putting an upbeat song can change your mood. Also, listening 
+                helps you focus on your tasks.
+            </p>
+            <figure>
+                <img src="https://i.pinimg.com/736x/35/01/4e/35014e05a00676f4558deb14a92a5fb9.jpg" alt="Music">
+                <figcaption>Listening to music while walking</figcaption>
+            </figure>
+            <p>When studying I like to listen to the Oppenheimer soundtrack. It makes me feel like I'm a cool scientist and not a broke collage student.</p>
+            <figure>
+                <img src="https://i.pinimg.com/736x/3b/f7/44/3bf74457fd09d546c809523ea58d954f.jpg" alt="Oppenheimer">
+                <figcaption>My favorite track from the soundtrack is Can you hear the music</figcaption>
+            </figure>
+        </section>
+        <section id="bestplace">
+            <h2>Best place to enjoy music</h2>
+            <p>The best place to listen to music is live concerts, directly listening to the music from the artist. Your'e not only watching your favorite artist, but youre also in a crowd
+                of other people who also enjoy the same artist. </p>
+                <figure>
+                    <img src="images/concert.jpeg" alt="Concert">
+                    <figcaption>Latest Concert I went to was Chief Keef</figcaption>
+                </figure>
+            <p>Concerts I've attended / going to attend</p>
+            <ul class="list">
+                <li>TXT - ACT: Sweet Mirage</li>
+                <li>City Morgue - My Bloody America</li>
+                <li>Chief Keef - A lil tour</li>
+                <li>Deftones - North American tour</li>
+            </ul>
+        </section>
+        <section id="howto">
+            <h2>How to make the most out of music</h2>
+            <p>If you want to expand your horizon of music, be open to listening to different genres or experimental sounds. The best way I find new music is by looking up playlists on Spotify or whatever music streaming service you use. If I like a song, I'll look into their discography and see if I like any other songs. Also seeing what that artist recommends is a great way to discover new music.
+            </p>
+            <figure>
+                <figcaption>Here's a few songs I reccomend from varying genres</figcaption>
+                <ul class="playlist">
+                    <li><img src="https://i.scdn.co/image/ab67616d00001e02f9e8f3f889a24247b88cc4a2" alt="KICK ii" >Arca - Rakata</li>
+                    <li><img src="https://i.scdn.co/image/ab67616d0000b273f65d720a5d70dbb93e96d528" alt ="Humbug">Arctic Monkeys - Crying Lightning</li>
+                    <li><img src="https://i.scdn.co/image/ab67616d0000b2737093cd0ee6043740f73e54d9" alt ="Right Place,Wrong Person">RM - Heaven</li>
+                    <li><img src="https://i.scdn.co/image/ab67616d0000b2731177117edbacace0239da72b" alt ="The Nine Stages of Change at the Deceased Remain">my dead girlfriend - hades in the dead of winter</li>
+                    <li><img src="https://i.scdn.co/image/ab67616d0000b273624b3acc1550484440a783a0" alt ="Twin Flames">Midrift - Twin Flames</li>
+                </ul>
+            </figure>
+        </section>
+        <section id="why">
+            <h2>Why listening to Music Matters</h2>
+            <p>Music reduces stress, boosts mood, and allows us to connect to ourselves and others. I've made friends because we have similar music tastes. There are so many songs out there that can make you feel a certain way. The lyrics can be relatable, and the beat can make you dance. Music is a universal language that everyone can understand and enjoy.
+            </p>
+            <figure>
+                <img src="https://i.pinimg.com/736x/99/4b/2d/994b2d632b6278f43a1c76873ae64b65.jpg" alt="Music">
+                <figcaption>What listening to music feels like</figcaption>
+            </figure>
+            <p>Tracks that I listen to when I want to feel something. When I listen to these songs I feel at peace.</p>
+            <ul class="list">
+                <li>Futile Devices - Sufjan Stevens</li>
+                <li>About you - 1975</li>
+                <li>You Are the Right One - Sports</li>
+                <li>Sundress - A$AP Rocky</li>
+                <li>Champagne Coast - Blood Orange</li>
+                <li>ikanaide - sohta, Yuki Kaai</li>
+
+            </ul>
+        </section>
+        <section id="ai">
+            <h2>AI prompts</h2>
+            <ul class="list">
+                <li>How can I hide the section exept the one I clicked? </li>
+                <li>How can I make it so the welcome loads fist?</li>
+                <li>How can I make the ul in the how section look like a playlist?</li>
+                <li>Why is my playlist aligned to the right and not centered?</li>
+            </ul>
+        </section>
+
         <footer>
+            <p>Page Designed by <a href="itis3135/mirianventinc.com/index.html">Ventura Innovations</a>&copy 2025</p>
 
         </footer>
 
