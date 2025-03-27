@@ -10,6 +10,9 @@ a{
 }
 main{
     font-size: 1.2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
 }
 img{
     width: 25%;
@@ -19,4 +22,27 @@ img{
 ul{
     list-style-type: disc;
     text-align: left;
+}
+figcaption{
+    font-style: italic;
+}
+@media(max-width:1024px){
+    main{
+        width: 95%;
+    }
+    img{
+        width: 40%;
+    }
+}
+@media(max-width:768px){
+    img{
+        width: 60%;
+    }
+    body{
+        text-align: left;
+    }
+    main{
+        width: 100%;
+        padding:0 10px;
+    }
 }
