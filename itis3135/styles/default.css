@@ -46,3 +46,27 @@ figcaption{
         padding:0 10px;
     }
 }
+table{
+    width:60%;
+    border-collapse: collapse;
+    margin:auto
+}
+th{
+    background-color: purple;
+    color: white;
+    text-align: left;
+
+}
+tr:nth-child(even){
+    background-color: hsl(322, 85%, 71%);
+}
+tr:nth-child(odd){
+    background-color: pink;
+}
+th,td{
+    border:1px solid black;
+    padding:8px
+}
+td:nth-child(4), td:nth-child(6){
+    text-align: center;
+}
