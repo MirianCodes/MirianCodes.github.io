@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midterm Project</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
         body{
             font-family:Lato;
@@ -23,7 +24,6 @@
             text-align: center;
         }
         p{
-            text-align: center;
             font-size: large;
         }
         figcaption{
@@ -117,19 +117,8 @@
 
     </style>
 </head>
-<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-<script>function showSection(id){
-    let sections = document.querySelectorAll('section');
-    for (let i = 0; i < sections.length; i++){
-        sections[i].style.display = 'none';
-    }
-    document.getElementById(id).style.display = 'block';
 
-}
-document.addEventListener('DOMContentLoaded', function(){
-    showSection('welcome');
-});
-    </script>
+
 <body>
     <header>
         <h1>Music is My Therapy</h1>
@@ -266,6 +255,20 @@ document.addEventListener('DOMContentLoaded', function(){
                  </a>
 
         </footer>
+    <script>
+    function showSection(id){
+    let sections = document.querySelectorAll('section');
+    for (let i = 0; i < sections.length; i++){
+        sections[i].style.display = 'none';
+    }
+    document.getElementById(id).style.display = 'block';
+
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        showSection('welcome');
+    });
+
+    </script>
 
     </main>
 </body>
