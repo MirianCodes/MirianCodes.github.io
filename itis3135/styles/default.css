@@ -1,19 +1,59 @@
 body{
-    background-color:#AEC6CF;
-    text-align: center;
-    color: aliceblue;
+    background-color:#ccedf9;
+    color: #3b3b58;
+    align-items: center;
     font-family:monospace;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding:1em 0;
 }
+.page {
+    background: #f0f8ff;
+    color: #3b3b58;
+    border: 2px dotted #3b3b58;
+    max-width: 1200px; 
+    position: relative;
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+html, body, .page {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 a{
-    color:darkorchid;
+    color:#5a4fcf;
     text-decoration: none;
+    font-weight: bold;
+}
+header{
+    padding-bottom:20px;
 }
 main{
-    font-size: 1.2em;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom:2em;
+    
+
+}
+section{
+    margin: 1em;
+    padding: 1em;
+}
+
 img{
     width: 25%;
     max-width: 400px;
@@ -36,14 +76,13 @@ figcaption{
 }
 @media(max-width:768px){
     img{
-        width: 60%;
+        width: 80%;
     }
     body{
         text-align: left;
     }
     main{
         width: 100%;
-        padding:0 10px;
     }
 }
 table{
