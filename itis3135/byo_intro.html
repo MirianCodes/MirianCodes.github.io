@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BYO Intro | ITIS 3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/survey.js" defer></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </head>
 <body>
-    
+    <header>
+    </header>
+    <main>
+        <div class="page">
+            <h2>Build Your Own Introduction page</h2>
+            <h3>Please fill out the form below</h3>
+            <form id="intro-form">
+                <label>Name: <input type="text" id="name"  placeholder="Mirian Ventura-Garcia"></label><br>
+                <label>Mascot: <input type="text" id="mascot" placeholder="Muted Vanishing Gecko"></label><br>
+                <label>Image: <input type="file" id="image" accept="image/png, image/jpeg"></label><br>
+                <img id="image-preview" src="images/me.jpeg" alt ="Image Preview"><br>
+                <label>Image Caption: <input type="text" id="imageCaption" required placeholder="It's me"></label><br>
+                <label>Personal Background: <textarea id="personalBg" placeholder="I was born in Charlotte, NC, to two immigrant parents. Although I have lived here most of my life, I have also lived in other states. I lived in Atlanta, GA; Austin, TX; and even a year in Mexico." required></textarea></label><br>
+                <label>Professional Background: <textarea id="profBg" placeholder="Currently working part-time in retail, hoping to land an internship soon." required></textarea></label><br>
+                <label>Academic Background: <textarea id="academicBg" placeholder="I’m a second-year computer science major, concentrating in cybersecurity."></textarea></label><br>
+                <label>Background in this subject: <textarea id="webBg" placeholder="I have never dabbled in web development, but after the first lecture, I’m interested in learning more! I do know the languages Python, Java, C, and assembly RISC-V."></textarea></label><br>
+                <label>Primary Computer Platform: <input type="text" id="platform" placeholder=" A Windows 11 home laptop and a Windows 11 PC."></label><br>
+                <div id="courses">
+                    <label>Courses Currently Taking & Why: </label>
+                    <button type="button" id="add-course">Add Course</button>
+                    <input type="text" id="course1" name ="courses" placeholder="ITIS 3135 Web-based Application Design and Development:">
+                    <input type="text" id="why" name="reasons" placeholder="I wanted to learn HTML and how to create my own websites.">
+                </div>
+                <label>Funny/Intresting item to remember me by: <input type="text" id="funnyThing" placeholder="In my junior year of high school, I saved up for a PC and built it by myself, but I kept messing things up, so it took me about 2 weeks for it to run properly. I even got zapped by the power cord at one point."></label><br>
+                <label>I'd also like to share: <input type="text" id="anythingElse" placeholder=" I have a cat named Chopper that I love very much, named after the One Piece character although I’ve never watched One Piece."></label><br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <div id="output"></div>
+        </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
