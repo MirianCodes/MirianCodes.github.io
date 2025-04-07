@@ -53,12 +53,12 @@ section{
     margin: 1em;
     padding: 1em;
 }
-
 img{
     width: 25%;
     max-width: 400px;
     max-height: 400px;
 }
+
 ul{
     list-style-type: disc;
     text-align: left;
