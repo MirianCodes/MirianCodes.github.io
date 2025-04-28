@@ -5,71 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow Gallery | ITIS 3135 Mirian Garcia</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/slideshow.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="slides">
-            <div class = "numbertext">1 / 12</div>
-            <img src="images/mphoto.jpeg" alt="M for Minecraft" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">2 / 12</div>
-            <img src="images/iphoto.jpeg" alt="I for Icee" style="width:100%">
-        </div> 
-
-        <div class="slides">
-            <div class = "numbertext">3 / 12</div>
-            <img src="images/rphoto.jpeg" alt="R for Rock" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">4 / 12</div>
-            <img src="images/inphoto.jpeg" alt="I for Infant" style="width:100%">
-        </div>
-
-        <div class ="slodes">
-            <div class = "numbertext">5 / 12</div>
-            <img src="images/aphoto.jpeg" alt="A for Art" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">6 / 12</div>
-            <img src="images/nphoto.jpeg" alt="N for Notes" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">7 / 12</div>
-            <img src="images/gphoto.jpeg" alt="G for Grandpa" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">8 / 12</div>
-            <img src="images/amphoto.jpeg" alt="A for Amusement park" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">9 / 12</div>
-            <img src="images/rlphoto.jpeg" alt="R for Rails" style="width:100%">
-        </div> 
-        <div class="slides">
-            <div class = "numbertext">10 / 12</div>
-            <img src="images/cphoto.jpeg" alt="C for Canes" style="width:100%">
-        </div>
-
-        <div class="slides">
-            <div class = "numbertext">11 / 12</div>
-            <img src="images/pphoto.jpeg" alt="I for" style="width:100%">
-        </div>
-        
-        <div class="slides">
-            <div class="numbertext">12 / 12</div>
-            <img src="images/aphoto.jpeg" alt="A for " style="width:100%">
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Slideshow Gallery</h2>
+        <p>Every letter of my full name Mirian Garcia visualized with images taken by me</p>
+        <div class="container">
+            <div class="slides">
+                <div class = "numbertext">1 / 12</div>
+                <img src="images/mphoto.jpeg" alt="M for Minecraft" style="width:100%">
             </div>
-        </div>
 
-        
+            <div class="slides">
+                <div class = "numbertext">2 / 12</div>
+                <img src="images/iphoto.jpeg" alt="I for Icee" style="width:100%">
+            </div> 
 
-    </div>
+            <div class="slides">
+                <div class = "numbertext">3 / 12</div>
+                <img src="images/rphoto.jpeg" alt="R for Rock" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">4 / 12</div>
+                <img src="images/inphoto.jpeg" alt="I for Infant" style="width:100%">
+            </div>
+
+            <div class ="slides">
+                <div class = "numbertext">5 / 12</div>
+                <img src="images/aphoto.jpeg" alt="A for Artwork" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">6 / 12</div>
+                <img src="images/nphoto.jpeg" alt="N for Notes" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">7 / 12</div>
+                <img src="images/gphoto.jpeg" alt="G for Grandpa" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">8 / 12</div>
+                <img src="images/amphoto.jpeg" alt="A for Amusement park" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">9 / 12</div>
+                <img src="images/rlphoto.jpeg" alt="R for Rails" style="width:100%">
+            </div> 
+            <div class="slides">
+                <div class = "numbertext">10 / 12</div>
+                <img src="images/cphoto.jpeg" alt="C for Canes" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class = "numbertext">11 / 12</div>
+                <img src="images/icedphoto.jpeg" alt="I for Ice Tea" style="width:100%">
+            </div>
+            
+            <div class="slides">
+                <div class="numbertext">12 / 12</div>
+                <img src="images/autophoto.jpeg" alt="A for Automobile" style="width:100%">
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>  
+            <div class ="thumbnail-container">
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="images/mphoto.jpeg" style="width:100%" onclick="currentSlide(1)" alt="M for Minecraft">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/iphoto.jpeg" style="width:100%" onclick="currentSlide(2)" alt="I for Icee">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/rphoto.jpeg" style="width:100%" onclick="currentSlide(3)" alt="R for Rock">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/inphoto.jpeg" style="width:100%" onclick="currentSlide(4)" alt="I for Infant">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/aphoto.jpeg" style="width:100%" onclick="currentSlide(5)" alt="A for Artwork"> 
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/nphoto.jpeg" style="width:100%" onclick="currentSlide(6)" alt="N for Notes">
+                    </div> 
+                    <div class="column">
+                        <img class="demo cursor" src="images/gphoto.jpeg" style="width:100%" onclick="currentSlide(7)" alt="G for Grandpa">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/amphoto.jpeg" style="width:100%" onclick="currentSlide(8)" alt="A for Amusement park">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/rlphoto.jpeg" style="width:100%" onclick="currentSlide(9)" alt="R for Rails">
+                    </div>    
+                    <div class="column">
+                        <img class="demo cursor" src="images/cphoto.jpeg" style="width:100%" onclick="currentSlide(10)" alt="C for Cat">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/icedphoto.jpeg" style="width:100%" onclick="currentSlide(11)" alt="I for Ice Tea">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="images/autophoto.jpeg" style="width:100%" onclick="currentSlide(12)" alt="A for Automobile">
+                    </div>
+                </div>     
+            </div>    
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </footer>
+
 </body>
 </html>
