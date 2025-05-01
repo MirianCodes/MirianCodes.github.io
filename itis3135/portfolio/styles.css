@@ -43,6 +43,25 @@ header {
 .header-title {
     font-size: 1.8em;
 }
+/* footer*/
+.footer{
+    background-color:#1f1f1f; 
+    color: #f4eded; 
+    padding: 20px 0; 
+    text-align: center; 
+    font-size: 14px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+    
+
+}
+.footer a {
+    color: #e9d2e1;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-decoration: none;
+}
 
 /* Navigation */
 nav ul {
@@ -60,8 +79,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Hero / Landing Section */
-.hero,
+/* Index Page */
 .landing {
     display: flex;
     align-items: center;
