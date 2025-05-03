@@ -40,22 +40,43 @@ const scrollToTop = () => {
 };
 scrollToTopButton.addEventListener("click", scrollToTop);
 //Contact form validation
-$(document).ready(function() {
-    $('.contact-form').on('submit', function(e) {
-        e.preventDefault();  // Prevent the form from submitting
+// Scroll animation
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.timeline-item');
 
+    const handleIntersection = (entries, observerSelf) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observerSelf.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5
+    });
+
+    items.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 0.2}s`;
+        observer.observe(item);
+    });
+
+    // Form validation logic
+    $('.contact-form').on('submit', function (e) {
+        e.preventDefault();
         let isValid = true;
 
-        // Validate name
         const name = $('#name').val().trim();
+        const email = $('#email').val().trim();
+        const message = $('#message').val().trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (name === '') {
             $('#nameError').text('Name is required');
             isValid = false;
         }
 
-        // Validate email
-        const email = $('#email').val().trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email === '') {
             $('#emailError').text('Email is required');
             isValid = false;
@@ -64,29 +85,22 @@ $(document).ready(function() {
             isValid = false;
         }
 
-        // Validate message
-        const message = $('#message').val().trim();
         if (message === '') {
             $('#messageError').text('Message is required');
             isValid = false;
         }
 
-        // If the form is valid, show success message and reset the form
         if (isValid) {
-            // Show success message
             $('.contact-form').after('<div class="success-message">Form submitted successfully!</div>');
-            $('.contact-form').trigger('reset'); // Reset the form
-        } else {
-            // Prevent form submission if there are errors
-            e.preventDefault();
+            $('.contact-form').trigger('reset');
         }
 
-        // Clear error messages on input focus
-        $('#name, #email, #message').on('focus', function() {
-            $(this).next('.error').text(''); // Clear the error message
+        $('#name, #email, #message').on('focus', function () {
+            $(this).next('.error').text('');
         });
     });
 });
+
 
 
 
