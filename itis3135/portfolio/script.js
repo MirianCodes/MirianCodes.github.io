@@ -61,43 +61,43 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transitionDelay = `${index * 0.2}s`;
         observer.observe(item);
     });
+});
 
-    // Form validation logic
-    $('.contact-form').on('submit', function (e) {
-        e.preventDefault();
-        let isValid = true;
+// Form validation logic
+$('.contact-form').on('submit', function (e) {
+    e.preventDefault();
+    let isValid = true;
 
-        const name = $('#name').val().trim();
-        const email = $('#email').val().trim();
-        const message = $('#message').val().trim();
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const name = $('#name').val().trim();
+    const email = $('#email').val().trim();
+    const message = $('#message').val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (name === '') {
-            $('#nameError').text('Name is required');
-            isValid = false;
-        }
+    if (name === '') {
+        $('#nameError').text('Name is required');
+        isValid = false;
+    }
 
-        if (email === '') {
-            $('#emailError').text('Email is required');
-            isValid = false;
-        } else if (!emailPattern.test(email)) {
-            $('#emailError').text('Invalid email format');
-            isValid = false;
-        }
+    if (email === '') {
+        $('#emailError').text('Email is required');
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        $('#emailError').text('Invalid email format');
+        isValid = false;
+    }
 
-        if (message === '') {
-            $('#messageError').text('Message is required');
-            isValid = false;
-        }
+    if (message === '') {
+        $('#messageError').text('Message is required');
+        isValid = false;
+    }
 
-        if (isValid) {
-            $('.contact-form').after('<div class="success-message">Form submitted successfully!</div>');
-            $('.contact-form').trigger('reset');
-        }
+    if (isValid) {
+        $('.contact-form').after('<div class="success-message">Form submitted successfully!</div>');
+        $('.contact-form').trigger('reset');
+    }
 
-        $('#name, #email, #message').on('focus', function () {
-            $(this).next('.error').text('');
-        });
+    $('#name, #email, #message').on('focus', function () {
+        $(this).next('.error').text('');
     });
 });
 
