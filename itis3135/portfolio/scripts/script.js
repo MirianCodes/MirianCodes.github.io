@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observer callback function
     const handleIntersection = (entries, observerSelf) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
                 observerSelf.unobserve(entry.target); // Stop observing once it's in view
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.timeline-item');
 
     const handleIntersection = (entries, observerSelf) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
                 observerSelf.unobserve(entry.target);

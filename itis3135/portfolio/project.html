@@ -9,40 +9,47 @@
     <title>Francisco's Balderas Project</title>
 </head>
 <body>
-    <header>
-        <h1>Francisco Balderas</h1>
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-               
-            </ul>
-        </nav>
+    <header id="header">
+      
     </header>
     <!--Project Page-->
     <main class="projects">
         <section class="project">
             <h2>Engine Rebuild: Chevy LS</h2>
-            <img src="project1.jpeg"  class="project-img" alt="Chevy LS Engine Rebuild">
+            <img src="images/project1.jpeg"  class="project-img" alt="Chevy LS Engine Rebuild">
             <p>
                 Fully disammabled and rebuilt a Chevy LS engine. This project involved replacing the pistons, rings, and bearings. I also upgraded the camshaft and installed new valve springs.
             </p>
         </section>
         <section class="project">
             <h2>Suspension Upgrade</h2>
-            <img src ="project2.jpeg" alt="Suspension Upgrade" class="project-img">
+            <img src ="images/project2.jpeg" alt="Suspension Upgrade" class="project-img">
             <p>
                 Upgraded the suspension on a Volvo vehicle to improve handling and ride quality. This included installing new shocks, struts, and sway bars.
             </p>
         </section>
+    <!--Slideshow-->
+        <section class="slideshow">
+            <h2>Slideshow of Trucks I've worked on and modified</h2>
+            <div class="slideshow-container">
+                <img class="slide" src="images/truck1.jpeg" alt="truck1">
+                <img class="slide" src="images/truck2.jpeg" alt="truck2">
+                <img class="slide" src="images/truck3.jpeg" alt="truck3">
+            </div>
+            <div class="slideshow-controls">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <p>&copy; 2025 Francisco Balderas. All rights reserved.</p>
-        <p>Page Designed by <a href="https://webpages.charlotte.edu/mventur3/itis3135/mirianventinc.com/index.html">Ventura Inc.</a>&copy; 2025</p>
+    <footer id="footer" class="footer">
+        
     
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/load-components.js"></script>
+    <script src="scripts/slideshow.js"></script>
+
 </body>
 </html>
